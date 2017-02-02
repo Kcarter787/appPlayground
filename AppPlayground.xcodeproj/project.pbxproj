@@ -22,6 +22,7 @@
 		51FB2F251E43B8A900E08B08 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51FB2F241E43B8A900E08B08 /* FBSDKCoreKit.framework */; };
 		51FB2F271E43B8B100E08B08 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51FB2F261E43B8B100E08B08 /* FBSDKLoginKit.framework */; };
 		51FB2F291E43B8B700E08B08 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51FB2F281E43B8B700E08B08 /* FBSDKShareKit.framework */; };
+		51FB2F2B1E43C06400E08B08 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FB2F2A1E43C06400E08B08 /* Logger.swift */; };
 		DBB718370DFEFB49582DCCB9 /* Pods_AppPlaygroundUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F151B04FAD4A4618378EEDE5 /* Pods_AppPlaygroundUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		51FB2F241E43B8A900E08B08 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "FacebookSDKs-iOS-4/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		51FB2F261E43B8B100E08B08 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "FacebookSDKs-iOS-4/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 		51FB2F281E43B8B700E08B08 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "FacebookSDKs-iOS-4/FBSDKShareKit.framework"; sourceTree = "<group>"; };
+		51FB2F2A1E43C06400E08B08 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		7AC83979618C3A97F59588D6 /* Pods-AppPlaygroundUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppPlaygroundUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppPlaygroundUITests/Pods-AppPlaygroundUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8D284554C21ED2A59FABC908 /* Pods-AppPlaygroundUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppPlaygroundUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppPlaygroundUITests/Pods-AppPlaygroundUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9C1D18B53D115F21FD53EFBD /* Pods-AppPlayground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppPlayground.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppPlayground/Pods-AppPlayground.debug.xcconfig"; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				51C2A19E1E43A1970030D657 /* Info.plist */,
 				51FB2F1E1E43AA0200E08B08 /* GoogleService-Info.plist */,
 				51FB2F1C1E43A8FC00E08B08 /* FirebaseNetworking.swift */,
+				51FB2F2A1E43C06400E08B08 /* Logger.swift */,
 			);
 			path = AppPlayground;
 			sourceTree = "<group>";
@@ -475,6 +478,7 @@
 				51FB2F1D1E43A8FC00E08B08 /* FirebaseNetworking.swift in Sources */,
 				51C2A1951E43A1970030D657 /* ViewController.swift in Sources */,
 				51C2A1931E43A1970030D657 /* AppDelegate.swift in Sources */,
+				51FB2F2B1E43C06400E08B08 /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

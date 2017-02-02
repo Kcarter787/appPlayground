@@ -8,6 +8,9 @@ target 'AppPlayground' do
   # Pods for AppPlayground
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
+  pod 'FacebookShare'
 
   target 'AppPlaygroundTests' do
     inherit! :search_paths
