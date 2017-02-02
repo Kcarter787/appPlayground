@@ -8,14 +8,17 @@
 
 import UIKit
 import FacebookLogin
+import FBSDKLoginKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, LoginButtonDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 //        let loginButton = LoginButton(readPermissions: [ .publicProfile, .userFriends, .email ])
 //        loginButton.center = view.center
-        view.addSubview(fbLoginButton)
+        setUpViewHierachy()
+        setUpViewConstraints()
+       
         
     }
 
@@ -25,9 +28,20 @@ class ViewController: UIViewController {
     }
     
     
+    //MARK: View Hierachy
+    private func setUpViewHierachy() {
+        view.addSubview(fbLoginButton)
+    }
+    
+    
+    //MARK: Constraints
+    private func setUpViewConstraints() {
+        fbLoginButton.center = self.view.center
+    }
+    
     
     //MARK: - Lazy init
-    private lazy var fbLoginButton: UIButton = {
+    private lazy var customFBLoginButton: UIButton = {
         // Add a custom login button to your app
         let button = UIButton(type: .custom)
         button.backgroundColor = UIColor.darkGray
@@ -37,6 +51,13 @@ class ViewController: UIViewController {
         button.addTarget(self, action: #selector(loginButtonClicked), for: .touchUpInside)
         return button
     }()
+    
+    private lazy var fbLoginButton: LoginButton = {
+        let button = LoginButton(readPermissions: [ .publicProfile, .userFriends, .email ])
+        button.delegate = self
+        return button
+    }()
+    
     
     //MARK: - Actions
     @objc
@@ -56,5 +77,30 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    
+    //MARK: LoginButtonDelegate Methods
+    func loginButtonDidCompleteLogin(_ loginButton: LoginButton, result: LoginResult) {
+        
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: LoginButton) {
+        
+    }
+    
+//    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+//        if let error = error {
+//            print(error.localizedDescription)
+//        }
+//        Logger.examine(object: result.debugDescription, withLabel: "FB Login: ")
+//    }
+//    func loginButtonWillLogin(_ loginButton: FBSDKLoginButton!) -> Bool {
+//        //
+//        return true
+//    }
+//    
+//    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+//        //
+//    }
 }
 

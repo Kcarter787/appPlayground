@@ -634,7 +634,7 @@
 				DEVELOPMENT_TEAM = J4ZCL94M34;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/FacebookSDKs-iOS-4",
+					"~/Documents/FacebookSDK",
 				);
 				INFOPLIST_FILE = AppPlayground/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -652,7 +652,7 @@
 				DEVELOPMENT_TEAM = J4ZCL94M34;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/FacebookSDKs-iOS-4",
+					"~/Documents/FacebookSDK",
 				);
 				INFOPLIST_FILE = AppPlayground/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
