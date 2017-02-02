@@ -11,7 +11,7 @@ import Foundation
 struct Logger {
     static func examine(object: Any, withLabel: String?) {
         let label = withLabel ?? "Object"
-        print("\n \(label): \(object)\n")
+        print("\n\n \(label): \(object)\n\n")
     }
     
 }
