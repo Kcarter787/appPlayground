@@ -1,4 +1,5 @@
 PODS:
+  - Batch (1.7.4)
   - Bolts (1.8.4):
     - Bolts/AppLinks (= 1.8.4)
     - Bolts/Tasks (= 1.8.4)
@@ -51,6 +52,7 @@ PODS:
     - GoogleToolboxForMac/Defines (= 2.1.1)
 
 DEPENDENCIES:
+  - Batch (~> 1.7)
   - FacebookCore
   - FacebookLogin
   - FacebookShare
@@ -58,6 +60,7 @@ DEPENDENCIES:
   - Firebase/Database
 
 SPEC CHECKSUMS:
+  Batch: 4c2ab398e92663ec7132fc348d6f613c541fd9e2
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   FacebookCore: 2cb3f0fbff218e9d3119cec84bae983b232412de
   FacebookLogin: c9d606504735780a9e3002465a615512e0a691a5
@@ -74,6 +77,6 @@ SPEC CHECKSUMS:
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
 
-PODFILE CHECKSUM: 25d3d9704adc2111f57a7584fe2b80aa950ecb54
+PODFILE CHECKSUM: fb78f4a51004e9bf381d264bc06a9a3408f4d70d
 
 COCOAPODS: 1.1.1

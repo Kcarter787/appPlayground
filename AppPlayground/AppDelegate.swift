@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 import FBSDKCoreKit
-
+import Batch
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -20,6 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FIRApp.configure()
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        // Start Batch.
+        //TODO: - switch to live api key before store release
+        Batch.start(withAPIKey: "DEV5893B498B8A1A24670EE326F7AA") // dev
+        // Batch.start(withAPIKey: "5893B498B87972E98DAB26B276A85C") // live
+        // Register for push notifications
+        BatchPush.registerForRemoteNotifications()
         return true
     }
     

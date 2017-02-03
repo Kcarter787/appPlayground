@@ -46,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		0D8D23895ED7772DA752469E /* Pods-AppPlayground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppPlayground.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppPlayground/Pods-AppPlayground.release.xcconfig"; sourceTree = "<group>"; };
+		51310C481E44D83B00E76970 /* AppPlayground.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppPlayground.entitlements; sourceTree = "<group>"; };
 		51C2A18F1E43A1960030D657 /* AppPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51C2A1921E43A1970030D657 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51C2A1941E43A1970030D657 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +135,7 @@
 		51C2A1911E43A1960030D657 /* AppPlayground */ = {
 			isa = PBXGroup;
 			children = (
+				51310C481E44D83B00E76970 /* AppPlayground.entitlements */,
 				51C2A1921E43A1970030D657 /* AppDelegate.swift */,
 				51C2A1941E43A1970030D657 /* ViewController.swift */,
 				51C2A1961E43A1970030D657 /* Main.storyboard */,
@@ -272,6 +274,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = J4ZCL94M34;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					51C2A1A21E43A1970030D657 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -635,6 +642,8 @@
 			baseConfigurationReference = 9C1D18B53D115F21FD53EFBD /* Pods-AppPlayground.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AppPlayground/AppPlayground.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = J4ZCL94M34;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -653,6 +662,8 @@
 			baseConfigurationReference = 0D8D23895ED7772DA752469E /* Pods-AppPlayground.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AppPlayground/AppPlayground.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = J4ZCL94M34;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
