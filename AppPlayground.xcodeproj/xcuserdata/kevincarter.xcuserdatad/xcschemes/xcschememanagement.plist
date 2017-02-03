@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>RichNotificationsExtension.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>12</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>51310C4C1E44E41500E76970</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>51C2A18E1E43A1960030D657</key>
 		<dict>
 			<key>primary</key>

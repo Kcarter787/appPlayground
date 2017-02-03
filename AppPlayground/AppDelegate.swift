@@ -10,17 +10,34 @@ import UIKit
 import Firebase
 import FBSDKCoreKit
 import Batch
+//import UserNotifications
+@objc
+class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        // Handle your notification action/open here
+         BatchPush.handle(userNotificationCenter: center, didReceive: response)
+    }
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+       
+        BatchPush.handle(userNotificationCenter: center, willPresent: notification, willShowSystemForegroundAlert: true)
+        // Since you set willShowSystemForegroundAlert to true, you should call completionHandler([.alert, .sound, .badge])
+        // If set to false, you'd call completionHandler([])
+    }
+}
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let notificationDelegate = NotificationDelegate()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FIRApp.configure()
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         // Start Batch.
+        UNUserNotificationCenter.current().delegate = notificationDelegate
         //TODO: - switch to live api key before store release
         Batch.start(withAPIKey: "DEV5893B498B8A1A24670EE326F7AA") // dev
         // Batch.start(withAPIKey: "5893B498B87972E98DAB26B276A85C") // live

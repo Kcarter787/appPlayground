@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		3F0438B1C824B3B6FE0C77F6 /* Pods_AppPlayground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74F6AFA8AE89CA67A097C2B /* Pods_AppPlayground.framework */; };
 		4A5EA98F64E60273294B6E49 /* Pods_AppPlaygroundTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AC025B888643CCA74A9E1C /* Pods_AppPlaygroundTests.framework */; };
+		51310C501E44E41500E76970 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51310C4F1E44E41500E76970 /* NotificationService.swift */; };
+		51310C541E44E41500E76970 /* RichNotificationsExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 51310C4D1E44E41500E76970 /* RichNotificationsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		51310C621E44E7C000E76970 /* BatchExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51310C611E44E7C000E76970 /* BatchExtension.framework */; };
+		51310C631E44E7DC00E76970 /* BatchExtension.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 51310C611E44E7C000E76970 /* BatchExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		51C2A1931E43A1970030D657 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C2A1921E43A1970030D657 /* AppDelegate.swift */; };
 		51C2A1951E43A1970030D657 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C2A1941E43A1970030D657 /* ViewController.swift */; };
 		51C2A1981E43A1970030D657 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51C2A1961E43A1970030D657 /* Main.storyboard */; };
@@ -28,6 +32,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		51310C521E44E41500E76970 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51C2A1871E43A1960030D657 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 51310C4C1E44E41500E76970;
+			remoteInfo = RichNotificationsExtension;
+		};
 		51C2A1A41E43A1970030D657 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 51C2A1871E43A1960030D657 /* Project object */;
@@ -44,9 +55,37 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		51310C581E44E41500E76970 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				51310C541E44E41500E76970 /* RichNotificationsExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51310C5D1E44E4ED00E76970 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				51310C631E44E7DC00E76970 /* BatchExtension.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0D8D23895ED7772DA752469E /* Pods-AppPlayground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppPlayground.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppPlayground/Pods-AppPlayground.release.xcconfig"; sourceTree = "<group>"; };
 		51310C481E44D83B00E76970 /* AppPlayground.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppPlayground.entitlements; sourceTree = "<group>"; };
+		51310C4D1E44E41500E76970 /* RichNotificationsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RichNotificationsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		51310C4F1E44E41500E76970 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		51310C511E44E41500E76970 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51310C611E44E7C000E76970 /* BatchExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BatchExtension.framework; sourceTree = "<group>"; };
 		51C2A18F1E43A1960030D657 /* AppPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51C2A1921E43A1970030D657 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51C2A1941E43A1970030D657 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +118,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		51310C4A1E44E41500E76970 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51310C621E44E7C000E76970 /* BatchExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		51C2A18C1E43A1960030D657 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -110,12 +157,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		51310C4E1E44E41500E76970 /* RichNotificationsExtension */ = {
+			isa = PBXGroup;
+			children = (
+				51310C611E44E7C000E76970 /* BatchExtension.framework */,
+				51310C4F1E44E41500E76970 /* NotificationService.swift */,
+				51310C511E44E41500E76970 /* Info.plist */,
+			);
+			path = RichNotificationsExtension;
+			sourceTree = "<group>";
+		};
 		51C2A1861E43A1960030D657 = {
 			isa = PBXGroup;
 			children = (
 				51C2A1911E43A1960030D657 /* AppPlayground */,
 				51C2A1A61E43A1970030D657 /* AppPlaygroundTests */,
 				51C2A1B11E43A1970030D657 /* AppPlaygroundUITests */,
+				51310C4E1E44E41500E76970 /* RichNotificationsExtension */,
 				51C2A1901E43A1960030D657 /* Products */,
 				E8EE9476D3570927BB5D43C1 /* Pods */,
 				F465D41D23971B8A6E3FCEFF /* Frameworks */,
@@ -128,6 +186,7 @@
 				51C2A18F1E43A1960030D657 /* AppPlayground.app */,
 				51C2A1A31E43A1970030D657 /* AppPlaygroundTests.xctest */,
 				51C2A1AE1E43A1970030D657 /* AppPlaygroundUITests.xctest */,
+				51310C4D1E44E41500E76970 /* RichNotificationsExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -198,6 +257,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		51310C4C1E44E41500E76970 /* RichNotificationsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51310C551E44E41500E76970 /* Build configuration list for PBXNativeTarget "RichNotificationsExtension" */;
+			buildPhases = (
+				51310C491E44E41500E76970 /* Sources */,
+				51310C4A1E44E41500E76970 /* Frameworks */,
+				51310C4B1E44E41500E76970 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RichNotificationsExtension;
+			productName = RichNotificationsExtension;
+			productReference = 51310C4D1E44E41500E76970 /* RichNotificationsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		51C2A18E1E43A1960030D657 /* AppPlayground */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 51C2A1B71E43A1970030D657 /* Build configuration list for PBXNativeTarget "AppPlayground" */;
@@ -208,10 +284,14 @@
 				51C2A18D1E43A1960030D657 /* Resources */,
 				11F71907BA5E30F0C4638CCD /* [CP] Embed Pods Frameworks */,
 				6698E12555EA12825152FBB0 /* [CP] Copy Pods Resources */,
+				51310C581E44E41500E76970 /* Embed App Extensions */,
+				51310C5D1E44E4ED00E76970 /* CopyFiles */,
+				51310C5F1E44E57400E76970 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				51310C531E44E41500E76970 /* PBXTargetDependency */,
 			);
 			name = AppPlayground;
 			productName = AppPlayground;
@@ -270,6 +350,11 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Kevin Carter";
 				TargetAttributes = {
+					51310C4C1E44E41500E76970 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = J4ZCL94M34;
+						ProvisioningStyle = Automatic;
+					};
 					51C2A18E1E43A1960030D657 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = J4ZCL94M34;
@@ -310,11 +395,19 @@
 				51C2A18E1E43A1960030D657 /* AppPlayground */,
 				51C2A1A21E43A1970030D657 /* AppPlaygroundTests */,
 				51C2A1AD1E43A1970030D657 /* AppPlaygroundUITests */,
+				51310C4C1E44E41500E76970 /* RichNotificationsExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		51310C4B1E44E41500E76970 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		51C2A18D1E43A1960030D657 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -433,6 +526,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		51310C5F1E44E57400E76970 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/BatchExtension.framework/strip-frameworks.sh\"";
+		};
 		56DCECB4870605773BB3C8D7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -481,6 +587,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		51310C491E44E41500E76970 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51310C501E44E41500E76970 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		51C2A18B1E43A1960030D657 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -512,6 +626,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		51310C531E44E41500E76970 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 51310C4C1E44E41500E76970 /* RichNotificationsExtension */;
+			targetProxy = 51310C521E44E41500E76970 /* PBXContainerItemProxy */;
+		};
 		51C2A1A51E43A1970030D657 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 51C2A18E1E43A1960030D657 /* AppPlayground */;
@@ -544,6 +663,40 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		51310C561E44E41500E76970 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = J4ZCL94M34;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RichNotificationsExtension",
+				);
+				INFOPLIST_FILE = RichNotificationsExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AppPlay.AppPlayground.RichNotificationsExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		51310C571E44E41500E76970 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = J4ZCL94M34;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RichNotificationsExtension",
+				);
+				INFOPLIST_FILE = RichNotificationsExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AppPlay.AppPlayground.RichNotificationsExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		51C2A1B51E43A1970030D657 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -641,6 +794,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9C1D18B53D115F21FD53EFBD /* Pods-AppPlayground.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = AppPlayground/AppPlayground.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -648,6 +802,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"~/Documents/FacebookSDK",
+					"$(PROJECT_DIR)/AppPlayground",
 				);
 				INFOPLIST_FILE = AppPlayground/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -661,6 +816,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0D8D23895ED7772DA752469E /* Pods-AppPlayground.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = AppPlayground/AppPlayground.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -668,6 +824,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"~/Documents/FacebookSDK",
+					"$(PROJECT_DIR)/AppPlayground",
 				);
 				INFOPLIST_FILE = AppPlayground/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -742,6 +899,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		51310C551E44E41500E76970 /* Build configuration list for PBXNativeTarget "RichNotificationsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51310C561E44E41500E76970 /* Debug */,
+				51310C571E44E41500E76970 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		51C2A18A1E43A1960030D657 /* Build configuration list for PBXProject "AppPlayground" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
