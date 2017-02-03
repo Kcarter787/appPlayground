@@ -11,6 +11,7 @@ target 'AppPlayground' do
   pod 'FacebookCore'
   pod 'FacebookLogin'
   pod 'FacebookShare'
+  
 
   target 'AppPlaygroundTests' do
     inherit! :search_paths
