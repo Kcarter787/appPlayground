@@ -32,6 +32,15 @@ class ViewController: UIViewController, LoginButtonDelegate {
     }
     
     
+    //MARK: - Actions
+    @objc
+    private func sendGroupInvite() {
+        let url = URLRequest(url: URL(string: Constants.postURLs.batchTransaction)!)
+        
+        
+    }
+    
+    
     //MARK: - Lazy init
     private lazy var fbLoginButton: LoginButton = {
         let button = LoginButton(readPermissions: [ .publicProfile, .userFriends, .email ])
@@ -39,8 +48,15 @@ class ViewController: UIViewController, LoginButtonDelegate {
         return button
     }()
     
+    private lazy var inviteButton: UIButton = {
+        let button = UIButton(frame: CGRect(x: 50, y: 250, width: 180, height: 44))
+        button.setTitle(Constants.appActionTitles.standardInvite, for: .normal)
+        button.layer.cornerRadius = 4
+        button.addTarget(self, action: #selector(sendGroupInvite), for: .touchUpInside)
+        return button
+    }()
 
-    // MARK: - Helpers
+    //MARK: - Helpers
     private func setUserDefault(value val: String, forKey: String) {
         let userDefaults = Foundation.UserDefaults.standard
         userDefaults.set(val, forKey: forKey)

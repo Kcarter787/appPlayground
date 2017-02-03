@@ -12,6 +12,7 @@ target 'AppPlayground' do
   pod 'FacebookLogin'
   pod 'FacebookShare'
   pod 'Batch', '~> 1.7'
+  pod 'Firebase/Auth'
 
   target 'AppPlaygroundTests' do
     inherit! :search_paths

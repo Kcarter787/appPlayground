@@ -8,16 +8,20 @@
 
 import Firebase
 import Batch
+import FirebaseAuth
 class Network {
 
     let rootRef = FIRDatabase.database().reference()
     // firebaseAuthData is populated by the result of "authAnonymouslyWithCompletionBlock" / "authWithOAuthProvider"
-//    let firebaseAuthData: FAuthData = FIR
-//    
-//    let editor = BatchUser.editor()
-//    editor.setIdentifier(firebaseAuthData.uid)
-//    editor.save() // Do not forget to save the changes!
+    
+    
     static func get() {
+        
+    }
+    static func connectBatchWithFirebase(firebaseUserId: String?) {
+        let editor = BatchUser.editor()
+        editor.setIdentifier(firebaseUserId)
+        editor.save() // Do not forget to save the changes!
         
     }
 }

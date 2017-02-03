@@ -10,7 +10,8 @@ import UIKit
 import Firebase
 import FBSDKCoreKit
 import Batch
-//import UserNotifications
+import FirebaseAuth
+
 @objc
 class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
@@ -39,10 +40,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Start Batch.
         UNUserNotificationCenter.current().delegate = notificationDelegate
         //TODO: - switch to live api key before store release
-        Batch.start(withAPIKey: "DEV5893B498B8A1A24670EE326F7AA") // dev
-        // Batch.start(withAPIKey: "5893B498B87972E98DAB26B276A85C") // live
+        Batch.start(withAPIKey: Constants.apiKeys.developmentBatch) // dev
         // Register for push notifications
         BatchPush.registerForRemoteNotifications()
+        
+        // Connect FIR + Batch
+        let firebaseAuthData = FIRAuth.auth()?.currentUser
+        Network.connectBatchWithFirebase(firebaseUserId: firebaseAuthData?.uid)
         return true
     }
     
