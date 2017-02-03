@@ -9,13 +9,14 @@
 import UIKit
 import FacebookLogin
 import FBSDKLoginKit
-
+import Firebase
 class ViewController: UIViewController, LoginButtonDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpViewHierachy()
         setUpViewConstraints()
+        
     }
     
     
