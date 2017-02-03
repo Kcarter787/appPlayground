@@ -13,6 +13,7 @@ struct Constants {
     struct apiKeys {
         static let developmentBatch = "DEV5893B498B8A1A24670EE326F7AA"
         static let liveBatch = "5893B498B87972E98DAB26B276A85C"
+        static let restKey = "44ad1b21fdd244c4ab9e0b414a545858"
     }
     
     //MARK: - UserDefault Keys
@@ -28,7 +29,7 @@ struct Constants {
     
     //MARK: - PostURLs
     struct postURLs {
-        static let batchTransaction = "https://api.batch.com/1.1/BATCH_API_KEY/transactional/send"
+        static let batchTransaction = "https://api.batch.com/1.1/\(Constants.apiKeys.developmentBatch)/transactional/send"
     }
     
     //MARK: - Test Data

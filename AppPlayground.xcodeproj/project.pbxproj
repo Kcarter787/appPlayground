@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3F0438B1C824B3B6FE0C77F6 /* Pods_AppPlayground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74F6AFA8AE89CA67A097C2B /* Pods_AppPlayground.framework */; };
 		4A5EA98F64E60273294B6E49 /* Pods_AppPlaygroundTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AC025B888643CCA74A9E1C /* Pods_AppPlaygroundTests.framework */; };
+		511664901E45392700453992 /* BatchNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5116648F1E45392700453992 /* BatchNetworking.swift */; };
 		51310C501E44E41500E76970 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51310C4F1E44E41500E76970 /* NotificationService.swift */; };
 		51310C541E44E41500E76970 /* RichNotificationsExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 51310C4D1E44E41500E76970 /* RichNotificationsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		51310C621E44E7C000E76970 /* BatchExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51310C611E44E7C000E76970 /* BatchExtension.framework */; };
@@ -81,6 +82,7 @@
 
 /* Begin PBXFileReference section */
 		0D8D23895ED7772DA752469E /* Pods-AppPlayground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppPlayground.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppPlayground/Pods-AppPlayground.release.xcconfig"; sourceTree = "<group>"; };
+		5116648F1E45392700453992 /* BatchNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatchNetworking.swift; sourceTree = "<group>"; };
 		51310C481E44D83B00E76970 /* AppPlayground.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppPlayground.entitlements; sourceTree = "<group>"; };
 		51310C4D1E44E41500E76970 /* RichNotificationsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RichNotificationsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		51310C4F1E44E41500E76970 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
@@ -157,6 +159,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5116648E1E4538F400453992 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				51FB2F1C1E43A8FC00E08B08 /* FirebaseNetworking.swift */,
+				5116648F1E45392700453992 /* BatchNetworking.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
 		51310C4E1E44E41500E76970 /* RichNotificationsExtension */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +205,7 @@
 		51C2A1911E43A1960030D657 /* AppPlayground */ = {
 			isa = PBXGroup;
 			children = (
+				5116648E1E4538F400453992 /* Network */,
 				51310C481E44D83B00E76970 /* AppPlayground.entitlements */,
 				51C2A1921E43A1970030D657 /* AppDelegate.swift */,
 				51C2A1941E43A1970030D657 /* ViewController.swift */,
@@ -202,7 +214,6 @@
 				51C2A19B1E43A1970030D657 /* LaunchScreen.storyboard */,
 				51C2A19E1E43A1970030D657 /* Info.plist */,
 				51FB2F1E1E43AA0200E08B08 /* GoogleService-Info.plist */,
-				51FB2F1C1E43A8FC00E08B08 /* FirebaseNetworking.swift */,
 				51FB2F2A1E43C06400E08B08 /* Logger.swift */,
 				51FB2F2E1E43E60A00E08B08 /* Constants.swift */,
 			);
@@ -599,6 +610,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				511664901E45392700453992 /* BatchNetworking.swift in Sources */,
 				51FB2F1D1E43A8FC00E08B08 /* FirebaseNetworking.swift in Sources */,
 				51C2A1951E43A1970030D657 /* ViewController.swift in Sources */,
 				51C2A1931E43A1970030D657 /* AppDelegate.swift in Sources */,
@@ -906,6 +918,7 @@
 				51310C571E44E41500E76970 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		51C2A18A1E43A1960030D657 /* Build configuration list for PBXProject "AppPlayground" */ = {
 			isa = XCConfigurationList;

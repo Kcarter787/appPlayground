@@ -10,6 +10,8 @@ import UIKit
 import FacebookLogin
 import FBSDKLoginKit
 import Firebase
+import Alamofire
+import Batch
 class ViewController: UIViewController, LoginButtonDelegate {
 
     override func viewDidLoad() {
@@ -23,6 +25,7 @@ class ViewController: UIViewController, LoginButtonDelegate {
     //MARK: View Hierachy
     private func setUpViewHierachy() {
         view.addSubview(fbLoginButton)
+        view.addSubview(inviteButton)
     }
     
     
@@ -35,9 +38,30 @@ class ViewController: UIViewController, LoginButtonDelegate {
     //MARK: - Actions
     @objc
     private func sendGroupInvite() {
-        let url = URLRequest(url: URL(string: Constants.postURLs.batchTransaction)!)
-        
-        
+        let headers: [String: String] = ["X-Authorization": Constants.apiKeys.restKey]
+        let params: [String: Any]? = ["group_id": "welcome",
+                                   "recipients": ["tokens": [BatchPush.lastKnownPushToken()]],
+                                   "message": ["title":"Don't give up!", "body":"Just keep training, you'll get better"],
+                                   "sandbox": true
+                                    ]
+       
+
+        Alamofire.request(Constants.postURLs.batchTransaction,
+                          method: .post,
+                          parameters: params,
+                          encoding: JSONEncoding.default,
+                          headers: headers
+                          ).responseJSON { (response:DataResponse<Any>) in
+                            switch(response.result) {
+                                case .success(_):
+                                    if let data = response.result.value{
+                                        print(data)
+                                    }
+                                case .failure(_):
+                                    print(response.result.error ?? "INEXPLICABLE ERROR!")
+                            }
+        }
+
     }
     
     
@@ -53,6 +77,7 @@ class ViewController: UIViewController, LoginButtonDelegate {
         button.setTitle(Constants.appActionTitles.standardInvite, for: .normal)
         button.layer.cornerRadius = 4
         button.addTarget(self, action: #selector(sendGroupInvite), for: .touchUpInside)
+        button.backgroundColor = UIColor.darkGray
         return button
     }()
 
